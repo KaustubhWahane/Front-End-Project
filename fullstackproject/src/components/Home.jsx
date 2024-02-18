@@ -1,4 +1,5 @@
-import Carousel from './CarouselAnimation';
+import Carousel from '../components/CarouselAnimation/CarouselAnimation';
+import Card from '../components/InformationCard/Card';
 import ImageSlider from './ImageSlider';
 import { useState , useEffect } from 'react';
 
@@ -22,6 +23,17 @@ function Home() {
   useEffect(() => {
     get_data();
   }, []);
+
+
+  // Card Details
+  const exampleCard = {
+    imgSrc: "https://picsum.photos/id/201/300/200",
+    imgAlt: "Card Image",
+    title: "Example Card",
+    description: "This be an example card description.",
+    buttonText: "Learn More",
+    link: "example-link",
+  };
 
   return (
     <div id="home">
@@ -57,6 +69,8 @@ function Home() {
         </div>
         </div>
         <Carousel/>
+        <Card {...exampleCard} />
+
     </div>
     // Add more dishes by writing there names and specials of it
   );

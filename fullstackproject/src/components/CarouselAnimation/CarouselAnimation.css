@@ -1,0 +1,12 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 5s linear; 
+}
