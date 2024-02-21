@@ -1,54 +1,54 @@
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
-import Card from '../components/InformationCard/Card';
 import ImageSlider from './ImageSlider';
+import RestaurantListing from './RestaurantListing/RestaurantListing';
+import { restaurantData } from '../components/RestaurantListing/Data';
 import { useState , useEffect } from 'react';
 
+
 function Home() {
+  // Using Meal Api to fetch all the data so I can make a grid view of all the food items
   const [meal_data, set_meal_data] = useState([]);
+  // This is used for error handling state
+  const [error, setError] = useState(null);
 
-//Using Meal Api to fetch all the data so I can make a grid view of all the food items
+const get_data = async () => {
+  try {
+    const res = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');
 
-  const get_data = async () => {
-    try {
-      const res = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');
-      const result = await res.json();
-      set_meal_data(result?.meals);
+    // Check if the fetch was successful
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data. Status: ${res.status}`);
     }
-    catch (err) {
-      console.log(`Handling error!`);
-      console.log(err);
-    }
-  };
- 
-  useEffect(() => {
-    get_data();
-  }, []);
 
+    const result = await res.json();
+    set_meal_data(result?.meals);
+  } catch (err) {
+    console.error('Error fetching data:', err.message);
+    setError('Oops! Something went wrong while fetching the data. Please try again later.');
+  }
+};
 
-  // Card Details
-  const exampleCard = {
-    imgSrc: "https://picsum.photos/id/201/300/200",
-    imgAlt: "Card Image",
-    title: "Example Card",
-    description: "This be an example card description.",
-    buttonText: "Learn More",
-    link: "example-link",
-  };
+useEffect(() => {
+  get_data();
+}, []);
+
+// Render the error message if there is an error
+if (error) {
+  return (
+    <div id="home">
+      <h2 className='text-center font-extrabold font-serif bg-red-700'>Home Page</h2>
+      <p className="text-red-500">{error}</p>
+    </div>
+  );
+}
 
   return (
     <div id="home">
       <h2 className='text-center font-extrabold font-serif bg-red-700'>Home Page</h2>
       <ImageSlider/>
-        <div className="bg-yellow-500 text-red-500 m-10 p-8">
-          <p className="text-lg">
-          Indulge in a culinary adventure that transcends ordinary dining experiences. Our chefs, artisans of flavor, meticulously craft each dish to bring forth a symphony of tastes that will leave an indelible mark on your plate. 
-          We pride ourselves on using only the freshest ingredients, sourced from the finest producers, ensuring every bite is a celebration of nature&apos;s bountiful offerings.
-          Follow the alluring aromas that emanate from our kitchen, beckoning you to a realm where mouthwatering scents mingle with the promise of exquisite flavors. 
-          Our menu, a global tapestry, takes you on a journey through diverse culinary landscapes, blending exotic spices and international influences.
-          </p>
-        </div>
+      <br /> <br/>
         <div>
-        <h1 className='bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-center text-custom text-4xl p-3'>Here&apos;s the simplified view of our Menu</h1>
+        <h1 className='bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-center text-custom text-4xl p-3'>Here&apos;s the various International food in a simplified way! </h1>
         <div className="flex flex-wrap justify-around items-center">
   {meal_data?.map((meal) => (
     <div key={meal?.idMeal} className="border border-black p-4 m-4 w-64 h-96 rounded-lg flex flex-col items-center">
@@ -68,11 +68,14 @@ function Home() {
     ))}
         </div>
         </div>
+      <h2 className='flex justify-center bg-red-700'>About Us Page</h2>
         <Carousel/>
-        <Card {...exampleCard} />
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+      {restaurantData.map((data, index) => (
+        <RestaurantListing key={index} {...data} />
+      ))}
     </div>
-    // Add more dishes by writing there names and specials of it
+    </div>
   );
 }
 
