@@ -1,62 +1,72 @@
+import MasalaDosa from '../../assets/Breakfast/MasalaDosa.jpg';
+import Poha from '../../assets/Breakfast/Poha.jpg';
+import IdliSambar from '../../assets/Breakfast/IdliSambar.jpg';
+import AlooParatha from '../../assets/Breakfast/AlooParatha.jpg';
+import Upma from '../../assets/Breakfast/Upma.jpg';
+import MisalPav from '../../assets/Breakfast/MisalPav.jpg';
+import Dhokla from '../../assets/Breakfast/Dhokla.jpg';
+import VadaPav from '../../assets/Breakfast/VadaPav.jpg';
+import CholeBhature from '../../assets/Breakfast/CholeBhature.jpg';
+
 export const restaurantData = [
-    {
-      name: "Spice Haven",
-      description: "Aromatic and flavorful Indian dishes for spice lovers.",
-      rating: 4.8,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Curry Palace",
-      description: "Experience the rich taste of traditional Indian curries.",
-      rating: 4.5,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Biryani Bliss",
-      description: "Savor the exquisite flavors of aromatic biryani.",
-      rating: 4.7,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Tandoori Delight",
-      description: "Grilled perfection with a variety of tandoori delights.",
-      rating: 4.6,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Dosa Delicacies",
-      description: "Crispy and delicious South Indian dosas with flavorful chutneys.",
-      rating: 4.9,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Paneer Paradise",
-      description: "Indulge in the creamy goodness of paneer-based dishes.",
-      rating: 4.4,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Chaat Street",
-      description: "Experience the explosion of flavors with Indian street chaats.",
-      rating: 4.6,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Masala Magic",
-      description: "Magical blends of spices in every dish for a taste adventure.",
-      rating: 4.7,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Kebab Kingdom",
-      description: "Juicy kebabs and skewers fit for royalty.",
-      rating: 4.8,
-      image: "https://via.placeholder.com/400x200",
-    },
-    {
-      name: "Samosa Street",
-      description: "Crispy and savory samosas for the perfect snack.",
-      rating: 4.5,
-      image: "https://via.placeholder.com/400x200",
-    },
-  ];
+  {
+    name: "Masala Dosa",
+    description: "Crispy South Indian crepes filled with spiced potatoes.",
+    rating: 4.8,
+    image: MasalaDosa
+  },
+  {
+    name: "Poha",
+    description: "Flattened rice cooked with spices, peas, and topped with coriander.",
+    rating: 4.5,
+    image: Poha
+  },
+  {
+    name: "Idli Sambar",
+    description: "Steamed rice cakes served with a flavorful lentil soup.",
+    rating: 4.7,
+    image: IdliSambar
+  },
+  {
+    name: "Aloo Paratha",
+    description: "Stuffed Indian bread with spiced mashed potatoes, cooked on a griddle.",
+    rating: 4.6,
+    image: AlooParatha
+  },
+  {
+    name: "Upma",
+    description: "Semolina cooked with vegetables and seasoned with spices.",
+    rating: 4.9,
+    image: Upma
+  },
+  {
+    name: "Misal Pav",
+    description: "Spicy sprouted lentils curry topped with farsan, onions, and lemon.",
+    rating: 4.4,
+    image: MisalPav
+  },
+  {
+    name: "Dhokla",
+    description: "Steamed and spongy cakes made from fermented rice and chickpea flour.",
+    rating: 4.6,
+    image: Dhokla
+  },
+  {
+    name: "Vada Pav",
+    description: "Fried potato dumplings served in a bun with chutneys.",
+    rating: 4.7,
+    image: VadaPav
+  },
+  {
+    name: "Chole Bhature",
+    description: "Spiced chickpeas served with deep-fried bread.",
+    rating: 4.8,
+    image: CholeBhature,
+  },
+  {
+    name: "Appam with Coconut Milk",
+    description: "Fermented rice pancakes served with sweet coconut milk.",
+    rating: 4.5,
+    image: "https://via.placeholder.com/400x200",
+  },
+];

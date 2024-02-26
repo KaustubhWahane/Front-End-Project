@@ -1,8 +1,9 @@
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
 import ImageSlider from './ImageSlider';
-import RestaurantListing from './RestaurantListing/RestaurantListing';
 import { restaurantData } from '../components/RestaurantListing/Data';
 import { useState , useEffect } from 'react';
+import Breakfast from './RestaurantListing/Breakfast';
+import Lunch from './RestaurantListing/Lunch';
 
 
 function Home() {
@@ -70,11 +71,20 @@ if (error) {
         </div>
       <h2 className='flex justify-center bg-red-700'>About Us Page</h2>
         <Carousel/>
+        {/* Breakfasts */}
+      <h1 className='bg-gray-400 text-center text-custom text-4xl p-3'>Grab your Breakfast!</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
-      {restaurantData.map((data, index) => (
-        <RestaurantListing key={index} {...data} />
-      ))}
-    </div>
+          {restaurantData.map((data, index) => (
+            <Breakfast key={index} {...data} />
+          ))}
+        </div>
+        {/* Lunch */}
+        <h1 className='bg-gray-400 text-center text-custom text-4xl p-3'>What&apos;s for dinner?</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+          {restaurantData.map((data, index) => (
+            <Lunch key={index} {...data} />
+          ))}
+        </div>
     </div>
   );
 }
