@@ -1,9 +1,10 @@
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
 import ImageSlider from './ImageSlider';
-import { restaurantData } from '../components/RestaurantListing/Data';
+import { restaurantData } from './RestaurantListing/Breakfast/Data';
 import { useState , useEffect } from 'react';
-import Breakfast from './RestaurantListing/Breakfast';
-import Lunch from './RestaurantListing/Lunch';
+import Breakfast from './RestaurantListing/Breakfast/Breakfast';
+import Lunch from './RestaurantListing/Lunch/Lunch';
+import { restaurantLunch } from './RestaurantListing/Lunch/Data';
 
 
 function Home() {
@@ -81,7 +82,7 @@ if (error) {
         {/* Lunch */}
         <h1 className='bg-gray-400 text-center text-custom text-4xl p-3'>What&apos;s for dinner?</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
-          {restaurantData.map((data, index) => (
+          {restaurantLunch.map((data, index) => (
             <Lunch key={index} {...data} />
           ))}
         </div>

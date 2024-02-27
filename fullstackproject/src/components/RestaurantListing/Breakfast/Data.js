@@ -1,12 +1,13 @@
-import MasalaDosa from '../../assets/Breakfast/MasalaDosa.jpg';
-import Poha from '../../assets/Breakfast/Poha.jpg';
-import IdliSambar from '../../assets/Breakfast/IdliSambar.jpg';
-import AlooParatha from '../../assets/Breakfast/AlooParatha.jpg';
-import Upma from '../../assets/Breakfast/Upma.jpg';
-import MisalPav from '../../assets/Breakfast/MisalPav.jpg';
-import Dhokla from '../../assets/Breakfast/Dhokla.jpg';
-import VadaPav from '../../assets/Breakfast/VadaPav.jpg';
-import CholeBhature from '../../assets/Breakfast/CholeBhature.jpg';
+import MasalaDosa from '../../../assets/Breakfast/MasalaDosa.jpg';
+import Poha from '../../../assets/Breakfast/Poha.jpg';
+import IdliSambar from '../../../assets/Breakfast/IdliSambar.jpg';
+import AlooParatha from '../../../assets/Breakfast/AlooParatha.jpg';
+import Upma from '../../../assets/Breakfast/Upma.jpg';
+import MisalPav from '../../../assets/Breakfast/MisalPav.jpg';
+import Dhokla from '../../../assets/Breakfast/Dhokla.jpg';
+import VadaPav from '../../../assets/Breakfast/VadaPav.jpg';
+import CholeBhature from '../../../assets/Breakfast/CholeBhature.jpg';
+import Appam from '../../../assets/Breakfast/Appam.jpg';
 
 export const restaurantData = [
   {
@@ -67,6 +68,6 @@ export const restaurantData = [
     name: "Appam with Coconut Milk",
     description: "Fermented rice pancakes served with sweet coconut milk.",
     rating: 4.5,
-    image: "https://via.placeholder.com/400x200",
+    image: Appam
   },
 ];
