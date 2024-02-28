@@ -7,7 +7,8 @@ const RestaurantListing = ({ name,  description, rating, image }) => {
       <img src={image} alt={name} className="mb-4 rounded-md w-full h-40 object-cover" />
       <h2 className="text-xl font-bold mb-2">{name}</h2>
       <p><span className="font-semibold">Description:</span> {description}</p>
-      <p><span className="font-semibold">Rating:</span> {rating}/5</p>
+      <p><span className="font-semibold">Rating:</span> {rating}/ 5</p>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">Order Now</button>
     </div>
     </>
   );

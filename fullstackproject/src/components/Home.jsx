@@ -1,11 +1,9 @@
-import Carousel from '../components/CarouselAnimation/CarouselAnimation';
 import ImageSlider from './ImageSlider';
 import { restaurantData } from './RestaurantListing/Breakfast/Data';
 import { useState , useEffect } from 'react';
 import Breakfast from './RestaurantListing/Breakfast/Breakfast';
 import Lunch from './RestaurantListing/Lunch/Lunch';
 import { restaurantLunch } from './RestaurantListing/Lunch/Data';
-
 
 function Home() {
   // Using Meal Api to fetch all the data so I can make a grid view of all the food items
@@ -70,8 +68,7 @@ if (error) {
     ))}
         </div>
         </div>
-      <h2 className='flex justify-center bg-red-700'>About Us Page</h2>
-        <Carousel/>
+
         {/* Breakfasts */}
       <h1 className='bg-gray-400 text-center text-custom text-4xl p-3'>Grab your Breakfast!</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">

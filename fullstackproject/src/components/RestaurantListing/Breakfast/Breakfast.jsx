@@ -1,5 +1,3 @@
-// RestaurantListing.js
-
 import PropTypes from 'prop-types';
 
 const Breakfast = ({ name,  description, rating, image }) => {
@@ -10,6 +8,7 @@ const Breakfast = ({ name,  description, rating, image }) => {
       <h2 className="text-xl font-bold mb-2">{name}</h2>
       <p><span className="font-semibold">Description:</span> {description}</p>
       <p><span className="font-semibold">Rating:</span> {rating}/5</p>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">Order Now</button>
     </div>
     </>
   );

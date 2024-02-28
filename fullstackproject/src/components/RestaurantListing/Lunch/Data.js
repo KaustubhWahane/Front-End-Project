@@ -36,7 +36,7 @@ export const restaurantLunch = [
   },
   {
     name: "Paalak Paneer",
-    description: "A creamy spinach and paneer curry, a delectable vegetarian delight.",
+    description: "A creamy spinach and paneer curry, a delectable vegetarian delight.  Paneer cubes are lightly fried until golden and then added to the spinach puree.",
     rating: 4.2,
     image: PaalakPaneer
   },

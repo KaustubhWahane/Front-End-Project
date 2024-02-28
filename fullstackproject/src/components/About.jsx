@@ -3,7 +3,7 @@ import CommentBox1 from './Comments/CommentBox';
 import 'animate.css';
 import CommentBox2 from './Comments/CommentBox2';
 import CommentBox3 from './Comments/CommentBox3';
-
+import Carousel from '../components/CarouselAnimation/CarouselAnimation';
 
   // Card Details
   const exampleCard = {
@@ -15,7 +15,8 @@ import CommentBox3 from './Comments/CommentBox3';
 function About() {
   return (
     <div id="about">
-      <div className="bg-yellow-200 text-red-500 m-10 p-8 rounded-lg shadow-lg">
+        <Carousel/>
+        <div className="bg-yellow-200 text-red-500 m-10 p-8 rounded-lg shadow-lg">
             <p className="text-lg italic">
             Indulge in a culinary adventure that transcends ordinary dining experiences. Our chefs, artisans of flavor, meticulously craft each dish to bring forth a symphony of tastes that will leave an indelible mark on your plate. 
             We pride ourselves on using only the freshest ingredients, sourced from the finest producers, ensuring every bite is a celebration of nature&apos;s bountiful offerings.
@@ -26,8 +27,8 @@ function About() {
         <Card {...exampleCard} />
         <br />
         <h2 className="text-3xl font-extrabold text-center text-blue-500 p-4 rounded-lg shadow-lg  bg-yellow-200" style={{ margin: 'auto', padding: '10px' }}>
-  Community Buzz!!
-</h2>
+        Community Buzz!!
+        </h2>
         <CommentBox1/>
         <CommentBox2/>
         <CommentBox3/>
