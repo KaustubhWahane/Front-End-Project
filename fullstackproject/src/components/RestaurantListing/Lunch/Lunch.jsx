@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 
 const RestaurantListing = ({ name,  description, rating, image }) => {
