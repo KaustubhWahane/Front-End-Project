@@ -8,6 +8,7 @@ export default {
     extend: { 
       fontFamily: {
       oswald: ['Oswald', 'sans-serif'],
+      'playfair-display': ['Playfair Display', 'serif']
     },}
   },
   plugins: [],
