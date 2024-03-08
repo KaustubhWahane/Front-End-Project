@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Toaster, toast } from 'sonner';
 
 const RestaurantListing = ({ name,  description, rating, image }) => {
   return (
@@ -8,7 +9,10 @@ const RestaurantListing = ({ name,  description, rating, image }) => {
       <h2 className="text-xl font-bold mb-2">{name}</h2>
       <p><span className="font-semibold">Description:</span> {description}</p>
       <p><span className="font-semibold">Rating:</span> {rating}/ 5</p>
-      <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">Order Now</button>
+      <Toaster richColors position="top-center"/>
+              <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"  onClick={() => toast.error('Have you signed it?')}>
+                Add
+              </button>
     </div>
     </>
   );

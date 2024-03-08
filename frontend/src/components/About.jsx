@@ -14,7 +14,7 @@ import Carousel from '../components/CarouselAnimation/CarouselAnimation';
 
 function About() {
   return (
-    <div id="about">
+    <div id="about" className='bg-yellow-500'>
         <Carousel/>
         <div className="bg-yellow-200 text-red-500 m-10 p-8 rounded-lg shadow-lg">
             <p className="text-lg italic">

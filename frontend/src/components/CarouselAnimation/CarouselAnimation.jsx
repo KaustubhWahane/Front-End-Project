@@ -38,7 +38,7 @@ function CarouselAnimation() {
   return (
     <>
       <h1 className='bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 text-center text-custom text-4xl p-3'>Our Branding Partners are</h1>
-      <div ref={carouselRef} className="flex items-center justify-center bg-gradient-to-r from-slate-400 via-slate-500 to-slate-600">
+      <div ref={carouselRef} className="flex items-center justify-center bg-yellow-500">
         <div className="max-w-xl overflow-hidden relative">
           <div className="flex space-x-4 overflow-hidden">
             {/* Carousel items are put here */}
