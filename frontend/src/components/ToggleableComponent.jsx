@@ -14,12 +14,10 @@ const ToggleableComponent = ({ onSignIn }) => {
       {showSignIn ? (
         <SignInButton onClick={onSignIn} />
       ) : (
-        // Render other components for "Back" state
         <button onClick={handleToggle}>
           Back
         </button>
       )}
-      {/* Add other components to render based on state */}
     </div>
   );
 };
