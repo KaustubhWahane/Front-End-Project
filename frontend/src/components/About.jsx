@@ -34,7 +34,7 @@ function About() {
         <CommentBox1/>
         <CommentBox2/>
         <CommentBox3/>
-        <div className="grid grid-cols-2 gap-x-4 mt-16 w-95 h-screen">
+        {/* <div className="grid grid-cols-2 gap-x-4 mt-16 w-95 h-screen">
         <div className="w-81 h-90 flex justify-center items-center border-4 border-blue-500">
           <img src="assets/FirstWebsite.png" alt="" className="w-full h-full" />
           <div className="mt-20">
@@ -55,7 +55,7 @@ function About() {
           <div className="mt-20">
           </div>
         </div>
-        </div>
+        </div> */}
     </div>
   );
 }
