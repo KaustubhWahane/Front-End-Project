@@ -1,11 +1,9 @@
 import Card from '../components/InformationCard/Card';
 import 'animate.css';
 import CommentBox1 from './Comments/CommentBox';
-import CommentBox2 from './Comments/CommentBox2';
-import CommentBox3 from './Comments/CommentBox3';
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
-import Chef from '../assets/People/Chef.jpg';
-import HomeFood from '../assets/People/HomeFood.jpg';
+// import Chef from '../assets/People/Chef.jpg';
+// import HomeFood from '../assets/People/HomeFood.jpg';
 
   // Card Details
   const exampleCard = {
@@ -32,8 +30,6 @@ function About() {
         Community Buzz!!
         </h2>
         <CommentBox1/>
-        <CommentBox2/>
-        <CommentBox3/>
         {/* <div className="grid grid-cols-2 gap-x-4 mt-16 w-95 h-screen">
         <div className="w-81 h-90 flex justify-center items-center border-4 border-blue-500">
           <img src="assets/FirstWebsite.png" alt="" className="w-full h-full" />
