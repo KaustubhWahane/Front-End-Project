@@ -23,7 +23,9 @@ function Home() {
       setMealData(result?.meals);
     } catch (err) {
       console.error('Error fetching data:', err.message);
-      setError('Oops! Something went wrong while fetching the data. Please try again later.');
+      setError(<div>
+        <h1 className='text-center text-4xl text-black'>Oops! Sorry couldn&apos;t show the dishes!</h1>
+      </div>);
     } finally {
       setLoading(false);
     }

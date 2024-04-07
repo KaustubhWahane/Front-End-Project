@@ -63,6 +63,7 @@ function SignInButton() {
                   placeholder="Enter your chef's name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
+                  autoComplete='username'
                 />
               </div>
 

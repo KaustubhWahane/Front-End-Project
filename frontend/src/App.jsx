@@ -1,16 +1,11 @@
 import { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; 
+import { Switch, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import ToggleableComponent from './components/ToggleableComponent';
-
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -24,20 +19,24 @@ function App() {
   };
 
   return (
-    <div className={`bg-${isSignedIn ? 'green' : 'slate'}-500`}>
-      <NavBar isSignedIn={isSignedIn} onSignIn={handleSignIn} onSignOut={handleSignOut} scrollToSection={scrollToSection} />
-      <div className="content-container">
-        {(isSignedIn ? (
-          <ToggleableComponent onSignIn={handleSignIn} />
-        ) : (
-          <>
-            <Home />
-            <About />
-            <ContactUs />
-          </>
-        ))}
+    <Router>
+      <div className={`bg-${isSignedIn ? 'green' : 'slate'}-500`}>
+        <NavBar isSignedIn={isSignedIn} onSignIn={handleSignIn} onSignOut={handleSignOut} />
+        <div className="content-container">
+          <Switch> {/* Use Switch here to define your routes */}
+            <Route exact path="/">
+              {isSignedIn ? <ToggleableComponent onSignIn={handleSignIn} /> : <Home />}
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <ContactUs />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

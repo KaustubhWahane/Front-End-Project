@@ -8,10 +8,7 @@ NavBar.propTypes = {
   onSignOut: PropTypes.func.isRequired,
 };
 
-function NavBar({ scrollToSection, isSignedIn, onSignIn, onSignOut }) {
-  const handleItemClick = (sectionId) => {
-    scrollToSection(sectionId);
-  };
+function NavBar({isSignedIn, onSignIn, onSignOut}) {
 
   const handleSignInClick = () => {
     if (isSignedIn) {
@@ -40,19 +37,13 @@ function NavBar({ scrollToSection, isSignedIn, onSignIn, onSignOut }) {
           <div className="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] right-0 top-[-100%] md:w-auto w-full flex items-center px-5">
             <ul className="flex md:flex-row flex-col md:items-end md:gap-[4vw] gap-8 justify-end">
               <li>
-                <a className="hover:text-gray-500" href="#" onClick={() => handleItemClick("home")}>
-                  Home
-                </a>
+                <a className="hover:text-gray-500">Home</a>
               </li>
               <li>
-                <a className="hover:text-gray-500" href="#" onClick={() => handleItemClick("about")}>
-                  About
-                </a>
+                <a className="hover:text-gray-500">About</a>
               </li>
               <li>
-                <a className="hover:text-gray-500" href="#" onClick={() => handleItemClick("contact")}>
-                  Contact Us
-                </a>
+                <a className="hover:text-gray-500">Contact Us</a>
               </li>
             </ul>
           </div>
