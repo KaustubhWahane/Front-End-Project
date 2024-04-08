@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import ToggleableComponent from './components/ToggleableComponent';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);

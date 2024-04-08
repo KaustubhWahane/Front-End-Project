@@ -1,33 +1,27 @@
 import { useState } from 'react';
+// Using from React-Bootstrap
+import { Carousel } from 'react-bootstrap';
 import Photo from '../assets/Cook Food background.jpg';
 import Photo2 from '../assets/FullIndianThaali.jpg'; 
 import Photo3 from '../assets/FullIndianThaali2.jpg'; 
 
-function CustomSlider() {
+function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [Photo, Photo2, Photo3];
 
-  const nextSlide = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length);
+  const handleSelect = (selectedIndex) => {
+    setCurrentImage(selectedIndex);
   };
 
   return (
-    <div className="custom-slider">
-      <img src={images[currentImage]} alt={`Image ${currentImage}`} />
-      <div className='absolute px-60 py-30 rounded-lg top-1/2 flex justify-between w-full'>
-        <button className='bg-red-500 p-3 rounded-lg' onClick={prevSlide}>Previous</button>
-        <button className='bg-red-500 p-3 rounded-lg' onClick={nextSlide}>Next</button>
-      </div>
-      <button className="absolute top-1/2 left-20 transform -translate-y-1/2 bg-emerald-500 text-white px-4 py-2 rounded">
-        Explore
-      </button>
-      
-    </div>
+    <Carousel activeIndex={currentImage} onSelect={handleSelect}>
+      {images.map((image, index) => (
+        <Carousel.Item key={index}>
+          <img className="w-100" src={image} alt={`Slide ${index}`} />
+        </Carousel.Item>
+      ))}
+    </Carousel>
   );
 }
 
-export default CustomSlider;
+export default ImageSlider;
