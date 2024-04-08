@@ -9,10 +9,11 @@ import ToggleableComponent from './components/ToggleableComponent';
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
-  // Another method of doing it however there is a flaw
-  // const handleSignIn = () => {
-  //   setIsSignedIn(isSignedIn => !isSignedIn);
-  // };
+  /*
+   Another method of doing it however there is a flaw
+  const handleSignIn = () => {
+    setIsSignedIn(isSignedIn => !isSignedIn);
+  */ 
   const handleSignIn = () => {
     setIsSignedIn(true);
   };

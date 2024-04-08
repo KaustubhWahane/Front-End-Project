@@ -52,7 +52,7 @@ function NavBar({isSignedIn, onSignIn, onSignOut}) {
 export default NavBar;
 
 NavBar.propTypes = {
-  scrollToSection: PropTypes.func.isRequired,
+  scrollToSection: PropTypes.func,
   isSignedIn: PropTypes.bool.isRequired,
   onSignIn: PropTypes.func.isRequired,
   onSignOut: PropTypes.func.isRequired,
