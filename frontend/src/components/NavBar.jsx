@@ -1,13 +1,6 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-NavBar.propTypes = {
-  scrollToSection: PropTypes.func.isRequired,
-  isSignedIn: PropTypes.bool.isRequired,
-  onSignIn: PropTypes.func.isRequired,
-  onSignOut: PropTypes.func.isRequired,
-};
-
 function NavBar({isSignedIn, onSignIn, onSignOut}) {
 
   const handleSignInClick = () => {
@@ -37,13 +30,13 @@ function NavBar({isSignedIn, onSignIn, onSignOut}) {
           <div className="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] right-0 top-[-100%] md:w-auto w-full flex items-center px-5">
             <ul className="flex md:flex-row flex-col md:items-end md:gap-[4vw] gap-8 justify-end">
               <li>
-                <a className="hover:text-gray-500">Home</a>
+                <a className="hover:text-gray-500" href='/'>Home</a>
               </li>
               <li>
-                <a className="hover:text-gray-500">About</a>
+                <a className="hover:text-gray-500" href='/about'>About</a>
               </li>
               <li>
-                <a className="hover:text-gray-500">Contact Us</a>
+                <a className="hover:text-gray-500" href='/contact'>Contact Us</a>
               </li>
             </ul>
           </div>
@@ -57,3 +50,10 @@ function NavBar({isSignedIn, onSignIn, onSignOut}) {
 }
 
 export default NavBar;
+
+NavBar.propTypes = {
+  scrollToSection: PropTypes.func.isRequired,
+  isSignedIn: PropTypes.bool.isRequired,
+  onSignIn: PropTypes.func.isRequired,
+  onSignOut: PropTypes.func.isRequired,
+};

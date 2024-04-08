@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; 
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
@@ -10,6 +9,10 @@ import ToggleableComponent from './components/ToggleableComponent';
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
+  // Another method of doing it however there is a flaw
+  // const handleSignIn = () => {
+  //   setIsSignedIn(isSignedIn => !isSignedIn);
+  // };
   const handleSignIn = () => {
     setIsSignedIn(true);
   };
@@ -18,22 +21,17 @@ function App() {
     setIsSignedIn(false);
   };
 
+
   return (
     <Router>
       <div className={`bg-${isSignedIn ? 'green' : 'slate'}-500`}>
-        <NavBar isSignedIn={isSignedIn} onSignIn={handleSignIn} onSignOut={handleSignOut} />
+      <NavBar isSignedIn={isSignedIn} onSignIn={handleSignIn} onSignOut={handleSignOut} />
         <div className="content-container">
-          <Switch> {/* Use Switch here to define your routes */}
-            <Route exact path="/">
-              {isSignedIn ? <ToggleableComponent onSignIn={handleSignIn} /> : <Home />}
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <ContactUs />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={isSignedIn ? <ToggleableComponent onSignIn={handleSignIn} /> : <Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactUs />} />
+          </Routes>
         </div>
       </div>
     </Router>
