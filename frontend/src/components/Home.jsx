@@ -26,7 +26,8 @@ function Home() {
       setError(<div>
         <h1 className='text-center text-4xl text-black'>Oops! Sorry couldn&apos;t show the dishes!</h1>
       </div>);
-    } finally {
+    } 
+    finally {
       setLoading(false);
     }
   };
@@ -39,7 +40,7 @@ function Home() {
     return (
       <div id="home" className="bg-orange-500">
         <h2 className="text-center font-extrabold font-serif bg-red-700">Home Page</h2>
-        <p className="text-white">Loading...</p>
+        <p className="text-white text-center text-5xl p-4">Loading...</p>
       </div>
     );
   }
@@ -55,7 +56,6 @@ function Home() {
 
   return (
     <div id="home" className="bg-orange-500">
-      <h2 className="text-center font-extrabold font-serif bg-red-700">Home Page</h2>
       <ImageSlider />
       <br /> <br/>
       <div>
