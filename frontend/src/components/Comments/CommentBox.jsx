@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types'
 import userProfile from '../../assets/UserProfile.jpg';
 import { commentsData } from './comments';
 
@@ -16,14 +15,18 @@ const CommentBox = () => {
 
   return (
     <div>
-      <div className={`comment-box p-6 bg-gray-200 rounded-lg shadow-md`}>
+      <div className={`p-6 bg-gray-200 rounded-lg shadow-md`}>
         <div className="comment-profile flex justify-center items-center">
           <img src={userProfile} alt="User Profile" className="w-12 h-12 rounded-full" />
         </div>
-        <div className="comment-text flex justify-center items-center">
-          <p>{commentsData[currentIndex].text}</p>
+        <div className="flex justify-center items-center">
+          {commentsData.map((comment, index) => (
+            <div key={comment.id} style={{ display: index === currentIndex ? 'block' : 'none' }}>
+              <p>{comment.text}</p>
+              <p className="font-semibold text-center">- {comment.author}</p>
+            </div>
+          ))}
         </div>
-            <p className="font-semibold text-center">- {commentsData[currentIndex].author}</p>
         <div className="comment-nav flex justify-between items-center">
           <button className="text-blue-500" onClick={prevComment}>
             Prev
@@ -35,14 +38,6 @@ const CommentBox = () => {
       </div>
     </div>
   );
-};
-
-CommentBox.propTypes = {
-  commentsData: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    author: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  })).isRequired,
 };
 
 

@@ -1,9 +1,9 @@
 import Card from '../components/InformationCard/Card';
 import 'animate.css';
-import CommentBox1 from './Comments/CommentBox';
+import CommentBox from './Comments/CommentBox';
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
-// import Chef from '../assets/People/Chef.jpg';
-// import HomeFood from '../assets/People/HomeFood.jpg';
+import Chef from '../assets/People/Chef.jpg';
+import HomeFood from '../assets/People/HomeFood.jpg';
 
   // Card Details
   const exampleCard = {
@@ -29,29 +29,10 @@ function About() {
         <h2 className="text-3xl font-extrabold text-center text-blue-500 p-4 rounded-lg shadow-lg  bg-yellow-200" style={{ margin: 'auto', padding: '10px' }}>
         Community Buzz!!
         </h2>
-        <CommentBox1/>
-        {/* <div className="grid grid-cols-2 gap-x-4 mt-16 w-95 h-screen">
-        <div className="w-81 h-90 flex justify-center items-center border-4 border-blue-500">
-          <img src="assets/FirstWebsite.png" alt="" className="w-full h-full" />
-          <div className="mt-20">
-          </div>
+        <CommentBox  />
+        <div className='flex border-black w-full h-50'>
+
         </div>
-        <div className="w-26 h-30 flex justify-center items-center border-4 border-blue-500">
-          <img src={Chef} alt="" className="w-30 h-20" />
-          <div className="mt-20">
-          </div>
-        </div>
-        <div className="w-30 h-30 flex justify-center items-center border-4 border-blue-500">
-          <img src={HomeFood} alt="" className="w-30 h-30" />
-          <div className="mt-20">
-          </div>
-        </div>
-        <div className="w-30 h-30 flex justify-center items-center border-4 border-blue-500">
-          <img src="assets/TictacToe.png" alt="" className="w-30 h-30" />
-          <div className="mt-20">
-          </div>
-        </div>
-        </div> */}
     </div>
   );
 }
