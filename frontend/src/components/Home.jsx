@@ -11,7 +11,7 @@ function Home() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
+  async function fetchData()  {
     try {
       const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');
 
@@ -30,7 +30,7 @@ function Home() {
     finally {
       setLoading(false);
     }
-  };
+  }
 
   useEffect(() => {
     fetchData();
@@ -39,7 +39,6 @@ function Home() {
   if (loading) {
     return (
       <div id="home" className="bg-orange-500">
-        <h2 className="text-center font-extrabold font-serif bg-red-700">Home Page</h2>
         <p className="text-white text-center text-5xl p-4">Loading...</p>
       </div>
     );

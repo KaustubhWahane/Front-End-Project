@@ -10,6 +10,10 @@ export default {
       oswald: ['Oswald', 'sans-serif'],
       pacifico: ['Pacifico', 'cursive'],
     },
+    colors: {
+      richChocolate: '#5D4037',
+      creamyVanilla: '#FFF9C4',
+    },
   }
   },
   plugins: [],
