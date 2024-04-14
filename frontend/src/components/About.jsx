@@ -1,9 +1,9 @@
 import Card from '../components/InformationCard/Card';
+// Installing animate.css via npm for the slider effect 
 import 'animate.css';
 import CommentBox from './Comments/CommentBox';
 import Carousel from '../components/CarouselAnimation/CarouselAnimation';
-import Chef from '../assets/People/Chef.jpg';
-import HomeFood from '../assets/People/HomeFood.jpg';
+import GridContainer from './GridComponent/GridComponent';
 
   // Card Details
   const exampleCard = {
@@ -29,10 +29,8 @@ function About() {
         <h2 className="text-3xl font-extrabold text-center text-blue-500 p-4 rounded-lg shadow-lg  bg-yellow-200" style={{ margin: 'auto', padding: '10px' }}>
         Community Buzz!!
         </h2>
-        <CommentBox  />
-        <div className='flex border-black w-full h-50'>
-
-        </div>
+        <CommentBox/>
+        <GridContainer/>
     </div>
   );
 }

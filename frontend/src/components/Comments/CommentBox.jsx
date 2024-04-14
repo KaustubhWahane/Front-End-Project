@@ -2,7 +2,7 @@ import { useState } from 'react';
 import userProfile from '../../assets/UserProfile.jpg';
 import { commentsData } from './comments';
 
-const CommentBox = () => {
+function CommentBox ()  {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextComment = () => {
@@ -38,7 +38,7 @@ const CommentBox = () => {
       </div>
     </div>
   );
-};
+}
 
 
 export default CommentBox;

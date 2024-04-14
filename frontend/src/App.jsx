@@ -4,7 +4,6 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
-import ToggleableComponent from './components/ToggleableComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
       <NavBar isSignedIn={isSignedIn} onSignIn={handleSignIn} onSignOut={handleSignOut} />
         <div className="content-container">
           <Routes>
-            <Route path="/" element={isSignedIn ? <ToggleableComponent onSignIn={handleSignIn} /> : <Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactUs />} />
           </Routes>
